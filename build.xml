@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="plg_radicalmart_wishboxgroupdiscount_j5" default="make" basedir=".">
+    <property name="build" value="build" />
+    <property name="prefix" value="plg" />
+    <property name="extension" value="radicalmart_wishboxgroupdiscount" />
+    <property name="version" value="1.0.0" />
+
+    <target name="make" description="Builds the extension release package for a version.">
+        <delete quiet="yes">
+            <fileset dir=".">
+                <include name="plg_radicalmart_wishboxgroupdiscount_j5.zip" />
+            </fileset>
+        </delete>
+
+        <zip destfile="plg_radicalmart_wishboxgroupdiscount_j5.zip">
+            <fileset dir="./">
+                <include name="language/**" />
+                <include name="services/**" />
+                <include name="src/**" />
+                <include name="script.php" />
+                <include name="wishboxgroupdiscount.xml" />
+            </fileset>
+        </zip>
+    </target>
+</project>

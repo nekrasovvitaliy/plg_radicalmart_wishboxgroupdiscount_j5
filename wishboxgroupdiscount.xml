@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8.1" type="plugin" method="upgrade" group="radicalmart">
+	<name>plg_radicalmart_wishboxgroupdiscount</name>
+	<creationDate>June 2024</creationDate>
+	<version>1.0.0</version>
+	<author>Vitaliy Nekrasov</author>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<copyright>Copyright (C) 2013–2024 Wishbox</copyright>
+	<description>PLG_RADICALMART_WISHBOXGROUPDISCOUNT_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Plugin\Radicalmart\Wishboxgroupdiscount</namespace>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<folder>language</folder>
+		<folder plugin="wishboxgroupdiscount">services</folder>
+		<folder>src</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="userGroupDiscounts"
+						type="subform"
+						label="PLG_RADICALMART_WISHBOXGROUPDISCOUNT_FIELD_USERGROUP_DISCOUNTS_LABEL"
+						layout="joomla.form.field.subform.repeatable-table"
+						icon="list"
+						multiple="true"
+				>
+					<form hidden="true" name="list_templates_modal" repeat="true">
+						<field
+								name="userGroupId"
+								type="UserGroupList"
+								label="PLG_RADICALMART_WISHBOXGROUPDISCOUNT_FIELD_USERGROUP_DISCOUNTS_USERGROUP_LABEL"
+								required="true"
+						/>
+						<field
+								name="discount"
+								type="number"
+								label="PLG_RADICALMART_WISHBOXGROUPDISCOUNT_FIELD_USERGROUP_DISCOUNTS_DISCOUNT_LABEL"
+								required="true"
+						/>
+					</form>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
